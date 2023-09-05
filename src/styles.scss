@@ -16,13 +16,13 @@ $White: hsl(0, 0%, 100%); // (Dark Mode Text & Light Mode Elements)
 
 :root {
     --color-background: hsl(0, 0%, 98%);
-    --color-text-input: hsl(0, 0%, 52%);
-    --color-elements: hsl(0, 0%, 100%);
-    --color-hover: hsl(0, 0%, 90%);
-    --color-text: hsl(200, 15%, 8%);
-    --color-search: hsl(0, 0%, 52%);
-    --color-dark-mode-background: hsl(207, 26%, 17%);
-    --color-light-mode-background: hsl(0, 0%, 98%);
+    --color-text-input: $DarkGray;
+    --color-elements: $White;
+    --color-hover: $VeryLightGray;
+    --color-text: $VeryDarkBlue ;
+    --color-search: $DarkGray;
+    --color-dark-mode-background: $VeryDarkBlue;
+    --color-light-mode-background: $VeryLightGray;
     --header-primary: 2.3875rem;
     --header-font-large: 3.6rem;
     --header-font-small: 1.8rem;
@@ -32,17 +32,18 @@ $White: hsl(0, 0%, 100%); // (Dark Mode Text & Light Mode Elements)
     --font-weight-boldest: 800;
     --font-weight-bold: 600;
     --font-weight-light: 300;
+    --shadow-common:0 2px 4px hsla(0, 0%, 0%, .2);
+    --shadow-focued: 0 2px 4px hsla(0, 0%, 0%, .3);
 }
 
 html[data-theme="dark"] {
     --color-text: #{$White};
     --color-background: #{$VeryDarkBlueBackground};
-    --color-background: hsl(207, 26%, 17%);
-    --color-text-input: hsl(0, 0%, 100%);
-    --color-elements: hsl(209, 23%, 22%);
-    --color-hover: hsl(208, 26%, 18%);
-    --color-text: hsl(0, 0%, 100%);
-    --color-search: hsl(0, 0%, 100%);
+    --color-text-input: #{$White};
+    --color-elements: #{$DarkBlue};
+    --color-hover: ${$VeryDarkBlueBackground};
+    --color-text: #{$White};
+    --color-search: #{$White};
     --shadow-common: 0 2px 4px hsla(0, 0%, 0%, .2);
     --shadow-focued: 0 2px 4px hsla(0, 0%, 0%, .3);
 }
