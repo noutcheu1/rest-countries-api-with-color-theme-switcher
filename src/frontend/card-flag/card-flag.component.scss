@@ -81,17 +81,62 @@ label{
     justify-content: center;
     gap: 31rem;
 }
+.content{
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    box-shadow: var(--shadow-common);
+    width: 100px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 40px 105px;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
 
 .header{
     padding: 1.4em 3em;
     box-shadow: var(--shadow-common);
+}
 
-}
 .header::after{
-    content: ">";
+    display: inline-block;
+    content: url('../../assets/icon-arrow-light.svg');
+    stroke: black;
+    fill: black;
     padding-left: 2em;
 }
+
 .header:hover::after{
-    content: "<";
+    display: inline-block;
+    content: url('../../assets/icon-arrow-light.svg');
+    stroke: black;
+    fill: black;
     padding-left: 2em;
+    transform: rotate(180deg) translateX(-2em);
 }
+
+@keyframes example {
+    0%   {
+        transform:  scaleY(0);
+      
+    }
+    25%  {
+        transform:  scaleY(0.25);
+      
+    }
+    50%  {
+        transform:  scaleY(0.5);
+     
+    }
+    75%  {
+        transform:  scaleY(0.75);
+     
+    }
+    100% {
+        transform:  scaleY(1);
+        
+    }
+  }
