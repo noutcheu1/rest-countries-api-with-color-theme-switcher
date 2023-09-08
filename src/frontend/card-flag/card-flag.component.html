@@ -8,28 +8,26 @@
     </div>
     <div class="filter_group">
         <div class="region_filter">
-          <div class="header">Filter By region</div>
-          <div class="content">
-            <ul>
-              <li>csknskfvjnsk</li>
-              <li>csknskfvjnsk</li>
-              <li>cscdkfvjnsk</li>
+          <div class="header" (click)="load_type_filter()">Filter By region</div>
+          <div class="content" >
+            <ul >
+              <li  *ngFor="let filter of list_of_filter"  (click)="filter_action(filter)" >{{filter}}</li>
             </ul>
           </div>
-        </div>
+        </div>  
     </div>
   </section>
   <section class="cards">
-    <div class="cardCountries">
+    <div class="cardCountries" *ngFor="let country of list_of_countries">
       <div class="card-header">
-        <img src="https://flagcdn.com/al.svg" alt="flag" />
+        <img src="{{country.flag}}" alt="flag" />
       </div>
       <div class="card-body">
-        <h2 class="title">cameroun</h2>
+        <h2 class="title">{{country.name}}</h2>
         <ul>
-          <li><span class="keys">Population:</span></li>
-          <li><span class="keys">Region:</span></li>
-          <li><span class="keys">Capital:</span></li>
+          <li><span class="keys">Population: </span>{{country.population}}</li>
+          <li><span class="keys">Region: </span>{{country.region}}</li>
+          <li><span class="keys">Capital: </span>{{country.capital}}</li>
         </ul>
       </div>
     </div>

@@ -46,9 +46,12 @@ main{
     margin: 1em auto;
     padding: 9px 2em;
 }
-
-li{
+li {
+    // display: flex;
+    // flex-direction: column;
+    // text-align: center;
     list-style: none;
+
 }
 
 input[name="search"]{
@@ -87,13 +90,24 @@ label{
     z-index: 3;
     box-shadow: var(--shadow-common);
     width: 100px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    padding: 40px 105px;
-    animation-name: example;
-    animation-duration: 1s;
-    animation-delay: 1s;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 21px 105px;
+    transition: transform 0.5s linear;
+    transform: scale(1,0);
+    text-transform: uppercase;
+    text-align: center;
+}
+.content ul {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(15px, 20px));
+    gap: 1em;
+   
+}
+.active {
+  
+    transform: scaleY(1);
+   
 }
 
 .header{
@@ -104,39 +118,18 @@ label{
 .header::after{
     display: inline-block;
     content: url('../../assets/icon-arrow-light.svg');
-    stroke: black;
-    fill: black;
+    stroke: var(--color-text);
+    fill: var(--color-text);
     padding-left: 2em;
 }
 
-.header:hover::after{
+
+.arrows_right::after{
     display: inline-block;
     content: url('../../assets/icon-arrow-light.svg');
-    stroke: black;
-    fill: black;
+    stroke: var(--color-text);
+    fill: var(--color-text);
     padding-left: 2em;
     transform: rotate(180deg) translateX(-2em);
 }
 
-@keyframes example {
-    0%   {
-        transform:  scaleY(0);
-      
-    }
-    25%  {
-        transform:  scaleY(0.25);
-      
-    }
-    50%  {
-        transform:  scaleY(0.5);
-     
-    }
-    75%  {
-        transform:  scaleY(0.75);
-     
-    }
-    100% {
-        transform:  scaleY(1);
-        
-    }
-  }

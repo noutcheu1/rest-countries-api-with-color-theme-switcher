@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { FrontendModule } from 'src/frontend/frontend.module';
 import { FrontendComponent } from 'src/frontend/frontend.component';
+import { ApiLoadModule } from 'src/api-load/api-load.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +16,7 @@ import { FrontendComponent } from 'src/frontend/frontend.component';
     BrowserModule,
     AppRoutingModule, 
     FrontendModule,
+    ApiLoadModule
   ],
   providers: [],
   bootstrap: [AppComponent, FrontendComponent]
