@@ -1,0 +1,192 @@
+main{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   font-size: 14px;
+   gap:2em;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16em, 23em));
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 3rem;
+    max-width: 144em;
+    margin: 3em auto;
+    width: 100%;
+    
+    .card-header{
+        height: 16em;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    
+   
+}
+
+.cardCountries{
+    transition: transform .3s,box-shadow .3s,background-color .3s;
+    box-shadow: var(--shadow-common);
+    background: var(--color-elements);
+    border-radius: .5rem;
+    overflow: hidden;
+    cursor: pointer;
+    height: 27em;
+}
+.title{
+    padding-bottom: 12px;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto;
+    padding: 9px 2em;
+}
+li {
+    // display: flex;
+    // flex-direction: column;
+    // text-align: center;
+    list-style: none;
+
+}
+
+input[name="search"]{
+    padding: 0.7em 3.59999em  0.7em 3.59999em;
+    font-size: var(--paragraph-font-regular);
+    background: var(--color-elements);
+    box-shadow: var(--shadow-common);
+    color: var(--color-text-input);
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: inherit;
+    width: 74%;
+    border:none;
+}
+
+label{
+   
+    position: relative;
+    max-width: 2em;
+    max-height: 2em;
+    top: 25%;
+    left: 10%;
+   
+    margin-left: 1em;
+}
+
+.find_filter{
+    margin-top:  2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 31em;
+}
+.content{
+    background-color: var(--color-background);
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    box-shadow: var(--shadow-common);
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 21px 105px;
+    transition: transform 0.5s linear;
+    transform: scale(1,0);
+    text-transform: uppercase;
+    text-align: center;
+}
+.content ul {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(15px, 25px));
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.active {
+  
+    transform: scaleY(1);
+   
+}
+
+.header{
+   
+    box-shadow: var(--shadow-common);
+    padding: 17px 25px;
+    width: 178px;
+}
+
+.header::after{
+    display: inline-block;
+    content: url('../../assets/icon-arrow-light.svg');
+    stroke: var(--color-text);
+    fill: var(--color-text);
+    padding-left: 2em;
+}
+
+
+.arrows_right::after{
+    display: inline-block;
+    content: url('../../assets/icon-arrow-light.svg');
+    stroke: var(--color-text);
+    fill: var(--color-text);
+    padding-left: 2em;
+    transform: rotate(180deg) translateX(-2em);
+}
+
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: var(--color-background);
+    gap: 0.3em;
+    margin: 1em auto;
+}
+.pageItems button{
+    padding: 1em;
+}
+
+.fieldFilter:hover{
+    background: #a9a9a9;
+ 
+}
+
+.fieldFilter{
+    cursor: pointer;
+    text-align: center;
+    padding: 20px 68px;
+}
+
+@media screen and (max-width:960px) {
+    .find_filter{
+        flex-direction: column;
+        gap: 1em;
+        width: 74%;
+    }
+
+    .header {
+        padding: 17px 25px;
+        width: 178px;
+
+    }
+    label{
+        top: 18px;
+    };
+}
+
+@media screen and (max-width:590px) {
+    label{
+        left: 50px;
+    };
+  
+    
+}

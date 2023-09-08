@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$DarkBlue : hsl(209, 23%, 22%); // (Dark Mode Elements)
+$VeryDarkBlueBackground: hsl(207, 26%, 17%); // (Dark Mode Background)
+$VeryDarkBlue : hsl(200, 15%, 8%); //(Light Mode Text)
+$DarkGray: hsl(0, 0%, 52%); //  (Light Mode Input)
+$VeryLightGray: hsl(0, 0%, 98%); //(Light Mode Background)
+$White: hsl(0, 0%, 100%); // (Dark Mode Text & Light Mode Elements)
+
+    
+
+:root {
+    --color-background: hsl(0, 0%, 98%);
+    --color-text-input: $DarkGray;
+    --color-elements: $White;
+    --color-hover: $VeryLightGray;
+    --color-text: $VeryDarkBlue ;
+    --color-search: $DarkGray;
+    --color-dark-mode-background: $VeryDarkBlue;
+    --color-light-mode-background: $VeryLightGray;
+    --header-primary: 2.3875rem;
+    --header-font-large: 3.6rem;
+    --header-font-small: 1.8rem;
+    --paragraph-font-regular: 1.6rem;
+    --paragraph-font-small: 1.4rem;
+    --line-height-regular: 1.6;
+    --font-weight-boldest: 800;
+    --font-weight-bold: 600;
+    --font-weight-light: 300;
+    --shadow-common:0 2px 4px hsla(0, 0%, 0%, .2);
+    --shadow-focued: 0 2px 4px hsla(0, 0%, 0%, .3);
+}
+
+html[data-theme="dark"] {
+    --color-text: #{$White};
+    --color-background: #{$VeryDarkBlueBackground};
+    --color-text-input: #{$White};
+    --color-elements: #{$DarkBlue};
+    --color-hover: ${$VeryDarkBlueBackground};
+    --color-text: #{$White};
+    --color-search: #{$White};
+    --shadow-common: 0 2px 4px hsla(0, 0%, 0%, .2);
+    --shadow-focued: 0 2px 4px hsla(0, 0%, 0%, .3);
+}
+// define themes
+body{
+    color: var(--color-text);
+    background: var(--color-background);
+}
