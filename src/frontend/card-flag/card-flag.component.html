@@ -11,14 +11,14 @@
           <div class="header" (click)="load_type_filter()">Filter By region</div>
           <div class="content" >
             <ul >
-              <li  *ngFor="let filter of list_of_filter"  (click)="filter_action(filter)" >{{filter}}</li>
+              <li  class="fieldFilter" *ngFor="let filter of list_of_filter"  (click)="filter_action(filter)" >{{filter}}</li>
             </ul>
           </div>
         </div>  
     </div>
   </section>
   <section class="cards">
-    <div class="cardCountries" *ngFor="let country of list_of_countries">
+    <div class="cardCountries" *ngFor="let country of list_of_countries_by_fliter" [routerLink]="['/detail', country.name]">
       <div class="card-header">
         <img src="{{country.flag}}" alt="flag" />
       </div>
@@ -29,7 +29,14 @@
           <li><span class="keys">Region: </span>{{country.region}}</li>
           <li><span class="keys">Capital: </span>{{country.capital}}</li>
         </ul>
+        
       </div>
     </div>
+   
   </section>
+  <ul class="pagination">
+    <li class="pageItems prev" ><button (click)="get_pagination(current_page - 1)" [disabled]="prevfull()">Prevouis</button></li>
+    <li class="pageItems" *ngFor="let page of display | range " (click)="get_pagination(page)"><button>{{page}}</button></li>
+    <li class="pageItems next"><button (click)="get_pagination(current_page + 1)" [disabled]="full()">Next</button></li>
+  </ul>
 </main>
