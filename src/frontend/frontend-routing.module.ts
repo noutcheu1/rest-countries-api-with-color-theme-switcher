@@ -8,7 +8,7 @@ import { CardDescriptionComponent } from './card-description/card-description.co
 
 const routes: Routes = [
   { path: 'home', component: CardFlagComponent },
-  { path: 'detail', component: CardDescriptionComponent },
+  { path: 'detail/:name', component: CardDescriptionComponent },
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 

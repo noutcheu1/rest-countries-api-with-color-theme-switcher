@@ -1,6 +1,15 @@
 <header>
-    <nav>
-        <div class="title"><a routerLink="/home" routerLinkActive="activebutton">Where in the world?</a></div>
-        <div class="mode_page" (click)="changeTheme()"><i></i> Dark Mode</div>
-    </nav>
+  <nav>
+    <div class="title">
+      <a routerLink="/home" routerLinkActive="activebutton"
+        >Where in the world?</a
+      >
+    </div>
+    <div class="mode_page" (click)="changeTheme()">
+        <div *ngIf={changetheme}>
+            <i><img src={{theme}} alt="{{nameMode}}" srcset=""></i>
+            {{nameMode}}
+        </div>
+    </div>
+  </nav>
 </header>
