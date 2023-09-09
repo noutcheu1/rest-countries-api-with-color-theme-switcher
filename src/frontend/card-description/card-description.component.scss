@@ -62,6 +62,13 @@ span{
 button{
     padding: 1em 4em;
 }
+
+button::before{
+    content: url('../../assets/left-arrow.svg');
+    width: 1em;
+    display: inline-block;
+}
+
 .list-border{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(6em, 8em));
