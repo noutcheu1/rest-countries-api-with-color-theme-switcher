@@ -13,4 +13,6 @@ import { CountriesService } from './repository/countries.service';
   ],
   providers: [CountriesService],
 })
-export class ApiLoadModule { }
+export class ApiLoadModule {
+  
+ }

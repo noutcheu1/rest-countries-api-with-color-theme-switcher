@@ -1,0 +1,103 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    
+    margin-left: 3em;
+}
+.flag img{
+    width: 100%;
+}
+.detail-description{
+    margin-left: 2.5em;
+}
+.card-detail{
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    width: 100%;
+    gap: 2em;
+}
+
+.flag{
+    grid-column: 1/1;
+}
+
+.detail-description{
+    grid-column: 2/4;
+}
+
+li{
+    list-style: none;
+}
+
+.detail-description{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    
+}
+
+li{
+    display: grid;
+    grid-template-columns: 7em 1fr;
+    gap: 1em;
+}
+span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.detail{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,  minmax(200px, 1fr));
+    row-gap: 2em;
+}
+.backup{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2em 2em 2em 0;
+   
+}
+button{
+    padding: 1em 4em;
+}
+
+button::before{
+    content: url('../../assets/left-arrow.svg');
+    width: 1em;
+    display: inline-block;
+}
+
+.list-border{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(6em, 8em));
+    gap: 1em;
+
+}
+.list-border div {
+    
+    padding: 10px 10px;
+    box-shadow: var(--shadow-common);
+}
+@media screen and (max-width:600px) {
+    .container{
+        margin: auto 3em;
+    }
+    .card-detail{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        gap: 2em;
+    }
+    .flag {
+        margin:  2em auto;
+        width: 100%;
+    }
+    .flag img{
+        margin-left: 0;
+    }
+}

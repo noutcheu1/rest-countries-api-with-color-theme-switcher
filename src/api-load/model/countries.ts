@@ -58,7 +58,7 @@ export class Country implements CountryData {
       this.latlng = data.latlng;
       this.demonym = data.demonym;
       this.area = data.area;
-      this.timezones = data.timezones;
+      this.timezones = data.borders;
       this.borders = data.borders;
       this.nativeName = data.nativeName;
       this.numericCode = data.numericCode;

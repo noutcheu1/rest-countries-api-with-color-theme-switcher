@@ -19,7 +19,7 @@ export class CardFlagComponent implements OnInit{
   regions = new Set();
   startIndex: number = 0;
   endIndex: number = 10;
-
+  searchvalue:string = '';
   
   constructor(private serviceCountries: CountriesService){
 
@@ -41,6 +41,14 @@ export class CardFlagComponent implements OnInit{
     
   }
 
+  searchCountriesByCriteria() {
+    
+    console.log(this.searchvalue);
+    
+    const searchCriteria = this.searchvalue.toLowerCase(); // Convertir le critère de recherche en minuscules pour une correspondance insensible à la casse
+    this.list_of_countries_by_fliter = this.list_of_countries.filter(country => country.name.toLowerCase().includes(searchCriteria));
+    
+  }
   
   load_hide_menu: boolean = false;
   load_type_filter(){

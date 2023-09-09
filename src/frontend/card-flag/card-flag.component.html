@@ -4,7 +4,7 @@
         <label for="search">
             <img src="assets/search-icon.svg" alt="" srcset="">
           </label>
-      <input  placeholder="Search for a country..." type="text" id="search" name="search">
+      <input  placeholder="Search for a country..." type="text" id="search" name="search" (keyup)="searchCountriesByCriteria()" [(ngModel)]="searchvalue">
     </div>
     <div class="filter_group">
         <div class="region_filter">

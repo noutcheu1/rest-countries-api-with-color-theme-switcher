@@ -185,8 +185,19 @@ label{
 
 @media screen and (max-width:590px) {
     label{
-        left: 50px;
+        left: 0;
+        top: 4.5em;
     };
-  
     
+input[name="search"]{
+    padding: 0.7em 3.59999em  0.7em 3.59999em;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: var(--paragraph-font-small);
+}
+
+.search_input{
+    width: 100%;
+}
+
 }
