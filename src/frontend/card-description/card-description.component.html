@@ -1,1 +1,31 @@
-<p>card-description works!</p>
+<div class="container">
+    <section class="backup">
+        <button routerLink="/home"><i></i> back</button>
+    </section>
+    <section class="card-detail" >
+        <div class="flag">
+            <img src="{{country.flag}}" alt="" srcset="">  
+        </div>
+        <div class="detail-description">
+            <h1>{{country.name}}</h1>
+            <div class="detail">
+                <ul class="information-left">               
+                        <li><h4>Native Name:</h4> {{country.nativeName}} </li>
+                        <li><h4>Population:</h4> {{country.population}} </li>
+                        <li><h4>Region:</h4> {{country.region}} </li>
+                        <li><h4>Sub Region:</h4> {{country.subregion}} </li>
+                        <li><h4>Capital:</h4> {{country.capital}} </li>
+                </ul>
+
+                <ul class="information-right">
+                    <li><h4>Top Level Domain:</h4> {{country.topLevelDomain}} </li>
+                    <li><h4>Currencies:</h4> <span *ngFor="let currencie of country.currencies">{{currencie.name}}</span></li>
+                    <li><h4>Languages:</h4><span> <i *ngFor="let lang of country.languages ">{{lang.nativeName+", "}} </i></span></li>
+                </ul>
+            </div>
+            <div class="tags-border">
+             <h4>Border Countries:</h4> <span class="list-border"><div  *ngFor="let border of getborder(countries, country.borders)" >{{border}}</div></span>
+            </div>
+        </div>
+    </section>
+</div>

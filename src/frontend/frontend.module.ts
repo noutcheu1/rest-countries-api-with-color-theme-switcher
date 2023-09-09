@@ -7,6 +7,7 @@ import { CardDescriptionComponent } from './card-description/card-description.co
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FrontendRoutingModule } from './frontend-routing.module';
 import { RangePipe } from './card-flag/range.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RangePipe } from './card-flag/range.pipe';
   imports: [
     CommonModule,
     FrontendRoutingModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports: [FrontendComponent],
   providers: []
